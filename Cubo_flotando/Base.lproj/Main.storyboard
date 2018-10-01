@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cubo_flotando" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="uap-H2-pg7" userLabel="ViewTop">
+                                <rect key="frame" x="0.0" y="180" width="414" height="356.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8M-zS-Kl7" userLabel="SliderLabelLado">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-An-xz9">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-ot-iTZ" userLabel="SliderLado">
+                                                <rect key="frame" x="36" y="0.0" width="380" height="31"/>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="c3K-An-xz9" firstAttribute="centerY" secondItem="XdC-ot-iTZ" secondAttribute="centerY" id="pqr-ic-J6m"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYY-8u-pnO">
+                                        <rect key="frame" x="0.0" y="33" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="faj-0G-3ZY" userLabel="GraficasView">
+                                        <rect key="frame" x="0.0" y="56.5" width="414" height="300"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                <color key="backgroundColor" red="0.21534144792562282" green="1" blue="0.24565616522693212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                                                <rect key="frame" x="0.0" y="100" width="414" height="100"/>
+                                                <color key="backgroundColor" red="0.14661214598714833" green="0.12120645985924905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
+                                                <rect key="frame" x="0.0" y="200" width="414" height="100"/>
+                                                <color key="backgroundColor" red="1" green="0.26482790818876378" blue="0.33531959400730338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zmu-qv-fhI" firstAttribute="width" secondItem="UJV-3m-6HF" secondAttribute="width" id="5zx-Zv-cDZ"/>
+                                            <constraint firstItem="WgQ-dC-HxH" firstAttribute="height" secondItem="zmu-qv-fhI" secondAttribute="height" id="6sy-cu-F9b"/>
+                                            <constraint firstItem="zmu-qv-fhI" firstAttribute="height" secondItem="UJV-3m-6HF" secondAttribute="height" id="Jm4-J7-8bl"/>
+                                            <constraint firstItem="WgQ-dC-HxH" firstAttribute="leading" secondItem="faj-0G-3ZY" secondAttribute="leading" id="lsi-QG-Jj8"/>
+                                            <constraint firstAttribute="trailing" secondItem="WgQ-dC-HxH" secondAttribute="trailing" id="yTu-57-B0Q"/>
+                                            <constraint firstItem="WgQ-dC-HxH" firstAttribute="width" secondItem="zmu-qv-fhI" secondAttribute="width" id="zSa-sx-Gpw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="E8M-zS-Kl7" secondAttribute="trailing" constant="15" id="7ui-4W-99l"/>
+                                    <constraint firstItem="E8M-zS-Kl7" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" constant="15" id="TVV-so-xyO"/>
+                                    <constraint firstAttribute="trailing" secondItem="faj-0G-3ZY" secondAttribute="trailing" id="jsB-hh-Sa1"/>
+                                    <constraint firstItem="faj-0G-3ZY" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" id="zso-eF-oCp"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99265774685898489" green="1" blue="0.76761731988124227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uap-H2-pg7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EHF-Ad-6co"/>
+                            <constraint firstAttribute="trailing" secondItem="uap-H2-pg7" secondAttribute="trailing" id="yBR-zy-Ylf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.710144927536234" y="131.25"/>
         </scene>
     </scenes>
 </document>
