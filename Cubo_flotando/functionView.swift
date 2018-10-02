@@ -96,7 +96,7 @@ class ParametricFunctionView: UIView {
         drawTicks()
         drawTexts()
         drawTrajectory()
-        drawPOI()
+        //drawPOI()
     }
     
     

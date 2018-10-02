@@ -18,28 +18,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2 Cubo Flotando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-PG-WiH">
-                                <rect key="frame" x="0.0" y="54" width="414" height="48.5"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="50.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-kf-FXq" userLabel="RaizView">
-                                <rect key="frame" x="0.0" y="135" width="414" height="761"/>
+                                <rect key="frame" x="0.0" y="137" width="414" height="759"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uap-H2-pg7" userLabel="ViewTop">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="375.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="374.5"/>
                                         <subviews>
                                             <stackView contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="E8M-zS-Kl7" userLabel="SliderLabelLado">
-                                                <rect key="frame" x="10" y="0.0" width="394" height="20.5"/>
+                                                <rect key="frame" x="10" y="0.0" width="394" height="21"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-An-xz9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="20.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="21"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-ot-iTZ" userLabel="SliderLado">
-                                                        <rect key="frame" x="51" y="0.0" width="345" height="21.5"/>
+                                                        <rect key="frame" x="51" y="0.0" width="345" height="22"/>
                                                     </slider>
                                                 </subviews>
                                                 <constraints>
@@ -47,16 +47,16 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYY-8u-pnO">
-                                                <rect key="frame" x="10" y="20.5" width="394" height="20.5"/>
+                                                <rect key="frame" x="10" y="21" width="394" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="faj-0G-3ZY" userLabel="GraficasView">
-                                                <rect key="frame" x="0.0" y="41" width="414" height="334.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="faj-0G-3ZY" userLabel="GraficasView">
+                                                <rect key="frame" x="0.0" y="41.5" width="414" height="333"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
-                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="111.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
                                                         <color key="backgroundColor" red="0.71904000698666037" green="1" blue="0.66368112579253746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
@@ -64,7 +64,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
-                                                        <rect key="frame" x="0.0" y="111.5" width="414" height="111.5"/>
+                                                        <rect key="frame" x="0.0" y="111" width="414" height="111"/>
                                                         <color key="backgroundColor" red="0.64770852881507412" green="0.67530500840770269" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
@@ -72,7 +72,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
-                                                        <rect key="frame" x="0.0" y="223" width="414" height="111.5"/>
+                                                        <rect key="frame" x="0.0" y="222" width="414" height="111"/>
                                                         <color key="backgroundColor" red="1" green="0.60717339007082449" blue="0.58368680214108215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
@@ -84,6 +84,7 @@
                                                     <constraint firstItem="zmu-qv-fhI" firstAttribute="width" secondItem="UJV-3m-6HF" secondAttribute="width" id="5zx-Zv-cDZ"/>
                                                     <constraint firstItem="zmu-qv-fhI" firstAttribute="height" secondItem="WgQ-dC-HxH" secondAttribute="height" id="N0k-uF-wVJ"/>
                                                     <constraint firstItem="UJV-3m-6HF" firstAttribute="height" secondItem="zmu-qv-fhI" secondAttribute="height" id="rOw-ox-HtL"/>
+                                                    <constraint firstItem="WgQ-dC-HxH" firstAttribute="width" secondItem="faj-0G-3ZY" secondAttribute="width" id="xIw-TG-rNZ"/>
                                                     <constraint firstItem="WgQ-dC-HxH" firstAttribute="width" secondItem="zmu-qv-fhI" secondAttribute="width" id="zSa-sx-Gpw"/>
                                                 </constraints>
                                             </stackView>
@@ -95,6 +96,7 @@
                                             <constraint firstItem="faj-0G-3ZY" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" id="EW4-ae-DNI"/>
                                             <constraint firstAttribute="trailing" secondItem="QYY-8u-pnO" secondAttribute="trailing" constant="10" id="Ghr-Sp-BzM"/>
                                             <constraint firstAttribute="bottom" secondItem="faj-0G-3ZY" secondAttribute="bottom" id="akn-jn-UPY"/>
+                                            <constraint firstItem="faj-0G-3ZY" firstAttribute="width" secondItem="uap-H2-pg7" secondAttribute="width" id="bJU-qe-MqT"/>
                                             <constraint firstItem="QYY-8u-pnO" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" constant="10" id="eKw-8w-QTI"/>
                                             <constraint firstAttribute="trailing" secondItem="E8M-zS-Kl7" secondAttribute="trailing" constant="10" id="ebU-qM-v7T"/>
                                             <constraint firstItem="faj-0G-3ZY" firstAttribute="top" secondItem="QYY-8u-pnO" secondAttribute="bottom" id="j2k-bJ-RdA"/>
@@ -104,7 +106,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-h2-u4T" userLabel="ViewBottom">
-                                        <rect key="frame" x="0.0" y="385.5" width="414" height="375.5"/>
+                                        <rect key="frame" x="0.0" y="384.5" width="414" height="374.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-Gf-Gnv">
                                                 <rect key="frame" x="10" y="0.0" width="394" height="20.5"/>
@@ -127,7 +129,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-1V-Qaw" userLabel="Grafica" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="41" width="414" height="334.5"/>
+                                                <rect key="frame" x="0.0" y="41" width="414" height="333.5"/>
                                                 <color key="backgroundColor" red="1" green="0.996959169891528" blue="0.77426186821111609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Posicion"/>
@@ -137,6 +139,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="8Zq-gu-lHR" firstAttribute="leading" secondItem="SiC-h2-u4T" secondAttribute="leading" constant="10" id="8Nw-ew-o4E"/>
+                                            <constraint firstItem="jhh-1V-Qaw" firstAttribute="width" secondItem="SiC-h2-u4T" secondAttribute="width" id="KMn-MD-sWm"/>
                                             <constraint firstAttribute="trailing" secondItem="8Zq-gu-lHR" secondAttribute="trailing" constant="10" id="P2n-93-9CW"/>
                                             <constraint firstAttribute="trailing" secondItem="PzO-Gf-Gnv" secondAttribute="trailing" constant="10" id="RpW-MN-CCK"/>
                                             <constraint firstItem="PzO-Gf-Gnv" firstAttribute="leading" secondItem="SiC-h2-u4T" secondAttribute="leading" constant="10" id="TLs-1m-mud"/>
@@ -167,6 +170,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="GraficaAceleracion" destination="UJV-3m-6HF" id="Ycw-jf-Xqr"/>
+                        <outlet property="GraficaPosicion" destination="WgQ-dC-HxH" id="mkq-vc-WvF"/>
+                        <outlet property="GraficaVelocidad" destination="zmu-qv-fhI" id="gfY-SE-l6D"/>
+                        <outlet property="LabelLado" destination="QYY-8u-pnO" id="OVU-PV-G1q"/>
+                        <outlet property="LabelTiempo" destination="8Zq-gu-lHR" id="aWk-ur-c9F"/>
+                        <outlet property="SliderLado" destination="XdC-ot-iTZ" id="D3s-xW-xua"/>
+                        <outlet property="SliderTiempo" destination="Fre-tL-Fun" id="vCp-tb-PPA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
