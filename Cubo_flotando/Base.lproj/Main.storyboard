@@ -17,70 +17,153 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="uap-H2-pg7" userLabel="ViewTop">
-                                <rect key="frame" x="0.0" y="180" width="414" height="356.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2 Cubo Flotando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-PG-WiH">
+                                <rect key="frame" x="0.0" y="54" width="414" height="48.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rbj-kf-FXq" userLabel="RaizView">
+                                <rect key="frame" x="0.0" y="135" width="414" height="761"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8M-zS-Kl7" userLabel="SliderLabelLado">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uap-H2-pg7" userLabel="ViewTop">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="375.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-An-xz9">
-                                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
+                                            <stackView contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="E8M-zS-Kl7" userLabel="SliderLabelLado">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3K-An-xz9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="38" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-ot-iTZ" userLabel="SliderLado">
+                                                        <rect key="frame" x="51" y="0.0" width="345" height="21.5"/>
+                                                    </slider>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="c3K-An-xz9" firstAttribute="centerY" secondItem="XdC-ot-iTZ" secondAttribute="centerY" id="pqr-ic-J6m"/>
+                                                </constraints>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYY-8u-pnO">
+                                                <rect key="frame" x="10" y="20.5" width="394" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-ot-iTZ" userLabel="SliderLado">
-                                                <rect key="frame" x="36" y="0.0" width="380" height="31"/>
-                                            </slider>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="faj-0G-3ZY" userLabel="GraficasView">
+                                                <rect key="frame" x="0.0" y="41" width="414" height="334.5"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="111.5"/>
+                                                        <color key="backgroundColor" red="0.71904000698666037" green="1" blue="0.66368112579253746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Posicion Z"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                                                        <rect key="frame" x="0.0" y="111.5" width="414" height="111.5"/>
+                                                        <color key="backgroundColor" red="0.64770852881507412" green="0.67530500840770269" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Velocidad"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
+                                                        <rect key="frame" x="0.0" y="223" width="414" height="111.5"/>
+                                                        <color key="backgroundColor" red="1" green="0.60717339007082449" blue="0.58368680214108215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Aceleracion"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zmu-qv-fhI" firstAttribute="width" secondItem="UJV-3m-6HF" secondAttribute="width" id="5zx-Zv-cDZ"/>
+                                                    <constraint firstItem="zmu-qv-fhI" firstAttribute="height" secondItem="WgQ-dC-HxH" secondAttribute="height" id="N0k-uF-wVJ"/>
+                                                    <constraint firstItem="UJV-3m-6HF" firstAttribute="height" secondItem="zmu-qv-fhI" secondAttribute="height" id="rOw-ox-HtL"/>
+                                                    <constraint firstItem="WgQ-dC-HxH" firstAttribute="width" secondItem="zmu-qv-fhI" secondAttribute="width" id="zSa-sx-Gpw"/>
+                                                </constraints>
+                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="c3K-An-xz9" firstAttribute="centerY" secondItem="XdC-ot-iTZ" secondAttribute="centerY" id="pqr-ic-J6m"/>
+                                            <constraint firstItem="faj-0G-3ZY" firstAttribute="top" secondItem="QYY-8u-pnO" secondAttribute="bottom" id="5iP-yQ-x3I"/>
+                                            <constraint firstItem="E8M-zS-Kl7" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" constant="10" id="9fJ-gL-bQl"/>
+                                            <constraint firstAttribute="bottom" secondItem="faj-0G-3ZY" secondAttribute="bottom" id="C0Y-g2-iOI"/>
+                                            <constraint firstItem="faj-0G-3ZY" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" id="EW4-ae-DNI"/>
+                                            <constraint firstAttribute="trailing" secondItem="QYY-8u-pnO" secondAttribute="trailing" constant="10" id="Ghr-Sp-BzM"/>
+                                            <constraint firstAttribute="bottom" secondItem="faj-0G-3ZY" secondAttribute="bottom" id="akn-jn-UPY"/>
+                                            <constraint firstItem="QYY-8u-pnO" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" constant="10" id="eKw-8w-QTI"/>
+                                            <constraint firstAttribute="trailing" secondItem="E8M-zS-Kl7" secondAttribute="trailing" constant="10" id="ebU-qM-v7T"/>
+                                            <constraint firstItem="faj-0G-3ZY" firstAttribute="top" secondItem="QYY-8u-pnO" secondAttribute="bottom" id="j2k-bJ-RdA"/>
+                                            <constraint firstItem="faj-0G-3ZY" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" id="kfJ-X3-aCx"/>
+                                            <constraint firstAttribute="trailing" secondItem="faj-0G-3ZY" secondAttribute="trailing" id="tS8-ju-z2Z"/>
+                                            <constraint firstAttribute="trailing" secondItem="faj-0G-3ZY" secondAttribute="trailing" id="wFr-BO-7aQ"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYY-8u-pnO">
-                                        <rect key="frame" x="0.0" y="33" width="414" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="faj-0G-3ZY" userLabel="GraficasView">
-                                        <rect key="frame" x="0.0" y="56.5" width="414" height="300"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SiC-h2-u4T" userLabel="ViewBottom">
+                                        <rect key="frame" x="0.0" y="385.5" width="414" height="375.5"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
-                                                <color key="backgroundColor" red="0.21534144792562282" green="1" blue="0.24565616522693212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
-                                                <rect key="frame" x="0.0" y="100" width="414" height="100"/>
-                                                <color key="backgroundColor" red="0.14661214598714833" green="0.12120645985924905" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
-                                                <rect key="frame" x="0.0" y="200" width="414" height="100"/>
-                                                <color key="backgroundColor" red="1" green="0.26482790818876378" blue="0.33531959400730338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-Gf-Gnv">
+                                                <rect key="frame" x="10" y="0.0" width="394" height="20.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kL0-q4-KgG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="57.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fre-tL-Fun">
+                                                        <rect key="frame" x="70.5" y="0.0" width="325.5" height="21.5"/>
+                                                    </slider>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zq-gu-lHR" userLabel="Tiempo">
+                                                <rect key="frame" x="10" y="20.5" width="394" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-1V-Qaw" userLabel="Grafica" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="41" width="414" height="334.5"/>
+                                                <color key="backgroundColor" red="1" green="0.996959169891528" blue="0.77426186821111609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Posicion"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Velocidad"/>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="zmu-qv-fhI" firstAttribute="width" secondItem="UJV-3m-6HF" secondAttribute="width" id="5zx-Zv-cDZ"/>
-                                            <constraint firstItem="WgQ-dC-HxH" firstAttribute="height" secondItem="zmu-qv-fhI" secondAttribute="height" id="6sy-cu-F9b"/>
-                                            <constraint firstItem="zmu-qv-fhI" firstAttribute="height" secondItem="UJV-3m-6HF" secondAttribute="height" id="Jm4-J7-8bl"/>
-                                            <constraint firstItem="WgQ-dC-HxH" firstAttribute="leading" secondItem="faj-0G-3ZY" secondAttribute="leading" id="lsi-QG-Jj8"/>
-                                            <constraint firstAttribute="trailing" secondItem="WgQ-dC-HxH" secondAttribute="trailing" id="yTu-57-B0Q"/>
-                                            <constraint firstItem="WgQ-dC-HxH" firstAttribute="width" secondItem="zmu-qv-fhI" secondAttribute="width" id="zSa-sx-Gpw"/>
+                                            <constraint firstItem="8Zq-gu-lHR" firstAttribute="leading" secondItem="SiC-h2-u4T" secondAttribute="leading" constant="10" id="8Nw-ew-o4E"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Zq-gu-lHR" secondAttribute="trailing" constant="10" id="P2n-93-9CW"/>
+                                            <constraint firstAttribute="trailing" secondItem="PzO-Gf-Gnv" secondAttribute="trailing" constant="10" id="RpW-MN-CCK"/>
+                                            <constraint firstItem="PzO-Gf-Gnv" firstAttribute="leading" secondItem="SiC-h2-u4T" secondAttribute="leading" constant="10" id="TLs-1m-mud"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.64049683549861214" green="0.64049683549861214" blue="0.64049683549861214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="E8M-zS-Kl7" secondAttribute="trailing" constant="15" id="7ui-4W-99l"/>
-                                    <constraint firstItem="E8M-zS-Kl7" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" constant="15" id="TVV-so-xyO"/>
-                                    <constraint firstAttribute="trailing" secondItem="faj-0G-3ZY" secondAttribute="trailing" id="jsB-hh-Sa1"/>
-                                    <constraint firstItem="faj-0G-3ZY" firstAttribute="leading" secondItem="uap-H2-pg7" secondAttribute="leading" id="zso-eF-oCp"/>
+                                    <constraint firstItem="SiC-h2-u4T" firstAttribute="top" secondItem="uap-H2-pg7" secondAttribute="bottom" constant="10" id="5Jq-H2-CmV"/>
+                                    <constraint firstItem="uap-H2-pg7" firstAttribute="top" secondItem="rbj-kf-FXq" secondAttribute="top" id="5aa-kv-KGF"/>
+                                    <constraint firstAttribute="bottom" secondItem="SiC-h2-u4T" secondAttribute="bottom" id="BoQ-6f-8br"/>
+                                    <constraint firstAttribute="trailing" secondItem="SiC-h2-u4T" secondAttribute="trailing" id="WsX-Ls-Gak"/>
+                                    <constraint firstItem="SiC-h2-u4T" firstAttribute="leading" secondItem="rbj-kf-FXq" secondAttribute="leading" id="dcW-x2-PVD"/>
+                                    <constraint firstItem="uap-H2-pg7" firstAttribute="leading" secondItem="rbj-kf-FXq" secondAttribute="leading" id="rgV-P3-X84"/>
+                                    <constraint firstAttribute="trailing" secondItem="uap-H2-pg7" secondAttribute="trailing" id="wfO-4V-KBh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99265774685898489" green="1" blue="0.76761731988124227" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uap-H2-pg7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EHF-Ad-6co"/>
-                            <constraint firstAttribute="trailing" secondItem="uap-H2-pg7" secondAttribute="trailing" id="yBR-zy-Ylf"/>
+                            <constraint firstItem="7kh-PG-WiH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Awm-NH-AnW"/>
+                            <constraint firstItem="rbj-kf-FXq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kg8-rv-z5m"/>
+                            <constraint firstItem="7kh-PG-WiH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="TrU-OU-HSx"/>
+                            <constraint firstItem="rbj-kf-FXq" firstAttribute="top" secondItem="7kh-PG-WiH" secondAttribute="bottom" constant="32.5" id="U5U-pt-D1y"/>
+                            <constraint firstAttribute="trailing" secondItem="rbj-kf-FXq" secondAttribute="trailing" id="ZMa-mj-r4I"/>
+                            <constraint firstItem="7kh-PG-WiH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xpY-0E-15X"/>
+                            <constraint firstAttribute="bottom" secondItem="rbj-kf-FXq" secondAttribute="bottom" id="xx0-NA-wt5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
