@@ -38,10 +38,10 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-ot-iTZ" userLabel="SliderLado">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="25" translatesAutoresizingMaskIntoConstraints="NO" id="XdC-ot-iTZ" userLabel="SliderLado">
                                                         <rect key="frame" x="51" y="0.0" width="345" height="21.5"/>
                                                         <connections>
-                                                            <action selector="cambioSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="5UE-D0-UkR"/>
+                                                            <action selector="cambioSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="AcV-JO-rBi"/>
                                                         </connections>
                                                     </slider>
                                                 </subviews>
@@ -60,26 +60,95 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2x-Ww-5Qk" userLabel="labelPosicion">
+                                                                <rect key="frame" x="10" y="10" width="42" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.71904000698666037" green="1" blue="0.66368112579253746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="v2x-Ww-5Qk" firstAttribute="top" secondItem="WgQ-dC-HxH" secondAttribute="top" constant="10" id="720-T4-vvO"/>
+                                                            <constraint firstItem="v2x-Ww-5Qk" firstAttribute="leading" secondItem="WgQ-dC-HxH" secondAttribute="leading" constant="10" id="dFH-Vw-1Br"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Posicion Z"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                                <color key="value" red="0.0" green="1" blue="0.10985147112332161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posicion Z"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
                                                         <rect key="frame" x="0.0" y="116.5" width="414" height="116.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqu-3p-1Fv" userLabel="labelVelocidad">
+                                                                <rect key="frame" x="10" y="10" width="42" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.64770852881507412" green="0.67530500840770269" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="dqu-3p-1Fv" firstAttribute="leading" secondItem="zmu-qv-fhI" secondAttribute="leading" constant="10" id="8sa-tu-dGB"/>
+                                                            <constraint firstItem="dqu-3p-1Fv" firstAttribute="top" secondItem="zmu-qv-fhI" secondAttribute="top" constant="10" id="Hgh-bQ-xxg"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Velocidad"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                                <color key="value" red="0.0" green="0.061501125432997128" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
                                                         <rect key="frame" x="0.0" y="233" width="414" height="116.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvZ-By-dit" userLabel="labelAceleracion">
+                                                                <rect key="frame" x="10" y="10" width="42" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="1" green="0.60717339007082449" blue="0.58368680214108215" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstItem="MvZ-By-dit" firstAttribute="top" secondItem="UJV-3m-6HF" secondAttribute="top" constant="10" id="CBU-MX-efw"/>
+                                                            <constraint firstItem="MvZ-By-dit" firstAttribute="leading" secondItem="UJV-3m-6HF" secondAttribute="leading" constant="10" id="oAM-UD-cfP"/>
+                                                        </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Tiempo"/>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Aceleracion"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                                <real key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                                <color key="value" red="1" green="0.058155415096606489" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Tiempo"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Aceleracion"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                 </subviews>
@@ -112,7 +181,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2.5" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Fre-tL-Fun">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Fre-tL-Fun">
                                                         <rect key="frame" x="70.5" y="0.0" width="325.5" height="21.5"/>
                                                         <connections>
                                                             <action selector="cambioSliderBottom:" destination="BYZ-38-t0r" eventType="valueChanged" id="pPg-gR-ZSl"/>
@@ -131,10 +200,21 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-1V-Qaw" userLabel="Grafica" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="41" width="414" height="349.5"/>
-                                                <color key="backgroundColor" red="1" green="0.996959169891528" blue="0.77426186821111609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.9969591699" blue="0.77426186819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="TextX" value="Posicion"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="TextY" value="Velocidad"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="trajectoryColor">
+                                                        <color key="value" red="1" green="0.86469539384394922" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="textX" value="Posicion"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -163,14 +243,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="GraficaAceleracion" destination="UJV-3m-6HF" id="Ycw-jf-Xqr"/>
-                        <outlet property="GraficaPosicion" destination="WgQ-dC-HxH" id="mkq-vc-WvF"/>
-                        <outlet property="GraficaTiempo" destination="jhh-1V-Qaw" id="oqI-a1-OZw"/>
-                        <outlet property="GraficaVelocidad" destination="zmu-qv-fhI" id="gfY-SE-l6D"/>
-                        <outlet property="LabelLado" destination="QYY-8u-pnO" id="OVU-PV-G1q"/>
-                        <outlet property="LabelTiempo" destination="8Zq-gu-lHR" id="aWk-ur-c9F"/>
                         <outlet property="SliderLado" destination="XdC-ot-iTZ" id="D3s-xW-xua"/>
                         <outlet property="SliderTiempo" destination="Fre-tL-Fun" id="vCp-tb-PPA"/>
+                        <outlet property="func1label" destination="v2x-Ww-5Qk" id="wCN-DN-Ikb"/>
+                        <outlet property="func2label" destination="dqu-3p-1Fv" id="ybX-CR-ERg"/>
+                        <outlet property="func3label" destination="MvZ-By-dit" id="hNG-Bw-dVZ"/>
+                        <outlet property="graficaAceleracion" destination="UJV-3m-6HF" id="9SJ-N3-NPQ"/>
+                        <outlet property="graficaPosicion" destination="WgQ-dC-HxH" id="qqR-do-vke"/>
+                        <outlet property="graficaVelocidad" destination="zmu-qv-fhI" id="cZu-UL-XDk"/>
+                        <outlet property="graficaVelocidadPosicion" destination="jhh-1V-Qaw" id="vWl-hv-SaF"/>
+                        <outlet property="labelLado" destination="QYY-8u-pnO" id="pTe-Iu-MNC"/>
+                        <outlet property="labelTiempo" destination="8Zq-gu-lHR" id="GOe-kw-amY"/>
+                        <outlet property="sliderLado" destination="XdC-ot-iTZ" id="MON-Ri-lzz"/>
+                        <outlet property="sliderTiempo" destination="Fre-tL-Fun" id="dnP-FO-fge"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

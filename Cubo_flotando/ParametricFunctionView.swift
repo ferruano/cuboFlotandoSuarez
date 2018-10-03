@@ -17,9 +17,7 @@ protocol ParametricFunctionViewDataSource: class {
     
     func startIndexFor(_ functionView: ParametricFunctionView) -> Double
     func endIndexFor(_ functionView: ParametricFunctionView) -> Double
-    
     func functionView(_ functionView: ParametricFunctionView, pointAt index: Double) -> FunctionPoint
-    
     func pointsOfInterestFor(_ functionView: ParametricFunctionView) -> [FunctionPoint]
 }
 
@@ -84,8 +82,8 @@ class ParametricFunctionView: UIView {
             func pointsOfInterestFor(_ functionView: ParametricFunctionView) -> [FunctionPoint] {
                 return []
             }
+            
         }
-        
         dataSource = FakeDataSource()
     }
     
@@ -96,7 +94,7 @@ class ParametricFunctionView: UIView {
         drawTicks()
         drawTexts()
         drawTrajectory()
-        //drawPOI()
+        drawPOI()
     }
     
     
