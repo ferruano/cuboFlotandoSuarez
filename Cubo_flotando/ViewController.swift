@@ -114,17 +114,17 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
         let t = index
         switch functionView {
         case graficaPosicion:
-            let z = model.posicionZ(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let z = model.posicionZ(tiempo: t, tamañoCubo: tamañoLado)
             return FunctionPoint(x: t, y: z)
         case graficaVelocidad:
-            let v = model.velocidad(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let v = model.velocidad(tiempo: t, tamañoCubo: tamañoLado)
             return FunctionPoint(x: t, y: v)
         case graficaAceleracion:
-            let a = model.aceleracion(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let a = model.aceleracion(tiempo: t, tamañoCubo: tamañoLado)
             return FunctionPoint(x: t, y: a)
         case graficaVelocidadPosicion:
-            let z = model.posicionZ(tiempo: tiempo, tamañoCubo: tamañoLado)
-            let v = model.velocidad(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let z = model.posicionZ(tiempo: t, tamañoCubo: tamañoLado)
+            let v = model.velocidad(tiempo: t, tamañoCubo: tamañoLado)
             return FunctionPoint(x: z, y: v)
         default:
             return FunctionPoint(x: 0, y: 0)
@@ -135,17 +135,17 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
         let t = tiempo
         switch functionView {
         case graficaPosicion:
-            let z = model.posicionZ(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let z = model.posicionZ(tiempo: t, tamañoCubo: tamañoLado)
             return [FunctionPoint(x: t, y: z)]
         case graficaVelocidad:
-            let v = model.velocidad(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let v = model.velocidad(tiempo: t, tamañoCubo: tamañoLado)
             return [FunctionPoint(x: t, y: v)]
         case graficaAceleracion:
-            let a = model.aceleracion(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let a = model.aceleracion(tiempo: t, tamañoCubo: tamañoLado)
             return [FunctionPoint(x: t, y: a)]
         case graficaVelocidadPosicion:
-            let z = model.posicionZ(tiempo: tiempo, tamañoCubo: tamañoLado)
-            let v = model.velocidad(tiempo: tiempo, tamañoCubo: tamañoLado)
+            let z = model.posicionZ(tiempo: t, tamañoCubo: tamañoLado)
+            let v = model.velocidad(tiempo: t, tamañoCubo: tamañoLado)
             return [FunctionPoint(x: z, y: v)]
         default:
             return [FunctionPoint(x: 0, y: 0)]
