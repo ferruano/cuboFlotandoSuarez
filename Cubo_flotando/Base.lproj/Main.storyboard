@@ -58,7 +58,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="faj-0G-3ZY" userLabel="GraficasView">
                                                 <rect key="frame" x="0.0" y="41" width="414" height="349.5"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="WgQ-dC-HxH" userLabel="GraficaPosicion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Green">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2x-Ww-5Qk" userLabel="labelPosicion">
@@ -69,6 +69,7 @@
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.71904000698666037" green="1" blue="0.66368112579253746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstItem="v2x-Ww-5Qk" firstAttribute="top" secondItem="WgQ-dC-HxH" secondAttribute="top" constant="10" id="720-T4-vvO"/>
                                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="v2x-Ww-5Qk" secondAttribute="trailing" constant="20" symbolic="YES" id="Ubt-1z-5td"/>
@@ -90,7 +91,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Posicion Z"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zmu-qv-fhI" userLabel="GraficaVelocidad" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
                                                         <rect key="frame" x="0.0" y="116.5" width="414" height="116.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqu-3p-1Fv" userLabel="labelVelocidad">
@@ -122,7 +123,7 @@
                                                             <userDefinedRuntimeAttribute type="string" keyPath="textY" value="Velocidad"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
+                                                    <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="UJV-3m-6HF" userLabel="GraficaAceleracion" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target" colorLabel="IBBuiltInLabel-Red">
                                                         <rect key="frame" x="0.0" y="233" width="414" height="116.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvZ-By-dit" userLabel="labelAceleracion">
@@ -201,7 +202,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-1V-Qaw" userLabel="Grafica" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target">
+                                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="jhh-1V-Qaw" userLabel="Grafica" customClass="ParametricFunctionView" customModule="Cubo_flotando" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="41" width="414" height="349.5"/>
                                                 <color key="backgroundColor" red="1" green="0.9969591699" blue="0.77426186819999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
@@ -244,6 +245,9 @@
                             <constraint firstItem="rbj-kf-FXq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="up7-1l-YHj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CmD-sd-fVy" appends="YES" id="3Cy-eN-pte"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="SliderLado" destination="XdC-ot-iTZ" id="D3s-xW-xua"/>
@@ -262,6 +266,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="CmD-sd-fVy">
+                    <connections>
+                        <action selector="cambioEscala:" destination="BYZ-38-t0r" id="Smo-CZ-c5f"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-79.710144927536234" y="131.25"/>
         </scene>
