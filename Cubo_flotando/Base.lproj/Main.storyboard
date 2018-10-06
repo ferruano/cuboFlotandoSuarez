@@ -19,6 +19,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="P2 Cubo Flotando" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-PG-WiH">
                                 <rect key="frame" x="95" y="54" width="224" height="35"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -236,6 +237,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="rbj-kf-FXq" secondAttribute="bottom" id="1KQ-n9-gHS"/>
                             <constraint firstItem="rbj-kf-FXq" firstAttribute="top" secondItem="7kh-PG-WiH" secondAttribute="bottom" constant="20" id="ayD-DW-pMX"/>
@@ -252,6 +254,7 @@
                     <connections>
                         <outlet property="SliderLado" destination="XdC-ot-iTZ" id="D3s-xW-xua"/>
                         <outlet property="SliderTiempo" destination="Fre-tL-Fun" id="vCp-tb-PPA"/>
+                        <outlet property="cuboFlotandoLabel" destination="7kh-PG-WiH" id="3C6-Mk-vYd"/>
                         <outlet property="func1label" destination="v2x-Ww-5Qk" id="wCN-DN-Ikb"/>
                         <outlet property="func2label" destination="dqu-3p-1Fv" id="ybX-CR-ERg"/>
                         <outlet property="func3label" destination="MvZ-By-dit" id="hNG-Bw-dVZ"/>

@@ -24,6 +24,8 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
     @IBOutlet weak var func1label: UILabel!
     @IBOutlet weak var func2label: UILabel!
     @IBOutlet weak var func3label: UILabel!
+
+    @IBOutlet weak var cuboFlotandoLabel: UILabel!
     
     var tiempo: Double = 0.0 {
         didSet {
@@ -50,6 +52,10 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
         graficaAceleracion.dataSource = self
         graficaVelocidadPosicion.dataSource = self
         
+        let tapReco = UITapGestureRecognizer(target: self, action: #selector(tapAction))
+        tapReco.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapReco)
+        
     
         sliderTiempo.sendActions(for: .valueChanged)
         sliderLado.sendActions(for: .valueChanged)
@@ -74,18 +80,18 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
         
         sender.scale = 1
     }
-/*
-    @IBAction func cambioVistasGraficas(_ sender: UIGestureRecognizer) {
-        if graficaVelocidad != nil {
-            graficaVelocidad.removeFromSuperview()
-            graficaAceleracion.removeFromSuperview()
+
+    @objc func tapAction() {
+        if cuboFlotandoLabel.text == "Practica 2 Funciona Tap" {
+        cuboFlotandoLabel.text = "P2 Cubo Flotando"
+        cuboFlotandoLabel.backgroundColor = UIColor.white
+        }else{
+            cuboFlotandoLabel.text = "Practica 2 Funciona Tap"
+            cuboFlotandoLabel.backgroundColor = UIColor.gray
         }
-        if graficaVelocidad == nil {
-            graficasView.addSubview(graficaVelocidad)
-            graficasView.addSubview(graficaAceleracion)
-        }
+
     }
-    */
+    
     @IBAction func cambioSliderBottom(_ sender: UISlider) {
         tiempo = Double(sender.value)
         let t = round(100*tiempo)/100
@@ -143,7 +149,6 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
     
     func functionView(_ functionView: ParametricFunctionView, pointAt index: Double) -> FunctionPoint {
         let t = index
-        setScale(functionView)
         switch functionView {
         case graficaPosicion:
             let z = model.posicionZ(tiempo: t, tamañoCubo: tamañoLado)
@@ -161,11 +166,11 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
         default:
             return FunctionPoint(x: 0, y: 0)
         }
+        
     }
     
     func pointsOfInterestFor(_ functionView: ParametricFunctionView) -> [FunctionPoint] {
         let t = tiempo
-        setScale(functionView)
         switch functionView {
         case graficaPosicion:
             let z = model.posicionZ(tiempo: t, tamañoCubo: tamañoLado)
@@ -184,17 +189,7 @@ class ViewController: UIViewController, ParametricFunctionViewDataSource{
             return [FunctionPoint(x: 0, y: 0)]
         }
     }
-    
-    func setScale(_ functionView: ParametricFunctionView){
-        if functionView == graficaVelocidadPosicion {
-            functionView.scaleX = Double((functionView.bounds.size.width * 8) / 414)
-            functionView.scaleY = Double((functionView.bounds.size.height * 8) / 337.5)
-        } else {
-            functionView.scaleX = Double((functionView.bounds.size.width * 21) / 414)
-            functionView.scaleY = Double((functionView.bounds.size.height * 2) / 112.5)
-        }
-    }
-    
+
     
 }
 
