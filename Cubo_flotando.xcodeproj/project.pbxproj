@@ -12,7 +12,7 @@
 		B64E890D2162C1780002AF35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64E890B2162C1780002AF35 /* Main.storyboard */; };
 		B64E890F2162C1790002AF35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64E890E2162C1790002AF35 /* Assets.xcassets */; };
 		B64E89122162C1790002AF35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64E89102162C1790002AF35 /* LaunchScreen.storyboard */; };
-		B64E891E2162C3320002AF35 /* ParametricFunctionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64E891D2162C3320002AF35 /* ParametricFunctionView.swift */; };
+		B66F863E216A1257006DC2C3 /* ParametricFunctionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66F863D216A1257006DC2C3 /* ParametricFunctionView.swift */; };
 		B6C7BE85216775060002A9D6 /* icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B6C7BE72216775060002A9D6 /* icon.jpg */; };
 		B6C7BE86216775060002A9D6 /* 7330163782_78581abb86-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7BE75216775060002A9D6 /* 7330163782_78581abb86-29@2x.png */; };
 		B6C7BE87216775060002A9D6 /* 7330163782_78581abb86-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B6C7BE76216775060002A9D6 /* 7330163782_78581abb86-60@3x.png */; };
@@ -41,7 +41,7 @@
 		B64E890E2162C1790002AF35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B64E89112162C1790002AF35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B64E89132162C1790002AF35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B64E891D2162C3320002AF35 /* ParametricFunctionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametricFunctionView.swift; sourceTree = "<group>"; };
+		B66F863D216A1257006DC2C3 /* ParametricFunctionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParametricFunctionView.swift; path = ../../../../.Trash/ParametricFunctionView.swift; sourceTree = "<group>"; };
 		B6C7BE72216775060002A9D6 /* icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpg; sourceTree = "<group>"; };
 		B6C7BE75216775060002A9D6 /* 7330163782_78581abb86-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7330163782_78581abb86-29@2x.png"; sourceTree = "<group>"; };
 		B6C7BE76216775060002A9D6 /* 7330163782_78581abb86-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "7330163782_78581abb86-60@3x.png"; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				B64E890E2162C1790002AF35 /* Assets.xcassets */,
 				B64E89102162C1790002AF35 /* LaunchScreen.storyboard */,
 				B64E89132162C1790002AF35 /* Info.plist */,
-				B64E891D2162C3320002AF35 /* ParametricFunctionView.swift */,
+				B66F863D216A1257006DC2C3 /* ParametricFunctionView.swift */,
 			);
 			path = Cubo_flotando;
 			sourceTree = "<group>";
@@ -242,8 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6E1B4DD2163CAB900CA2528 /* flotabilidad.swift in Sources */,
+				B66F863E216A1257006DC2C3 /* ParametricFunctionView.swift in Sources */,
 				B64E890A2162C1780002AF35 /* ViewController.swift in Sources */,
-				B64E891E2162C3320002AF35 /* ParametricFunctionView.swift in Sources */,
 				B64E89082162C1780002AF35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
